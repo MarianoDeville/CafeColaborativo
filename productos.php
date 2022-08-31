@@ -33,8 +33,8 @@
     $listaProductos=$sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
-<div class="d-none d-sm-block">
-    
+<div class="<div class="d-none d-sm-block">
+
     <table class="table table-bordered">
 
         <thead>
