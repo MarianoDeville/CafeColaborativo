@@ -7,4 +7,4 @@
     <hr class="my-2">
 </div>
 
-<?php include("./template/pie.php"); ?>
+<?php include("./template/footer.php"); ?>

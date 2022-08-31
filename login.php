@@ -30,17 +30,18 @@
 
                         <div class = "form-group">
 
-                            <label>Usuario:</label>
-                            <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Ingrese su nombre de usuario.">
+                        <p><label>Usuario:</label></p>
+                            <p><input type="text" class="form-control" name="usuario" id="usuario" placeholder="Ingrese su nombre de usuario."></p>
                             <small id="emailHelp" class="form-text text-muted">Nunca comparta sus datos con nadie.</small>
+                            <br></br>
                         </div>
 
                         <div class="form-group">
 
-                            <label>Contraseña:</label>
+                            <p><label>Contraseña:</label></p>
                             <input type="password" class="form-control" name="contraseña" placeholder="Escriba su contraseña">
                         </div>
-
+                        <br></br>            
                         <button type="submit" class="btn btn-primary" name="accion" value="entrar">Entrar</button>
                     </form>
                 </div>
@@ -49,4 +50,4 @@
     </div>
 </div>
 
-<?php include("./template/pie.php"); ?>
+<?php include("./template/footer.php"); ?>

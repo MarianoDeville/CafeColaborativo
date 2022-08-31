@@ -1,7 +1,7 @@
 <?php
 
     $host="localhost";
-    $bd="cafeteria";
+    $bd="cafe_colaborativodb";
     //$usuario="mycafecola";
     $usuario="root";
     //$contraseña="UCjmuTN6";
