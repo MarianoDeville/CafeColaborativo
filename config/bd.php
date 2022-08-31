@@ -2,10 +2,10 @@
 
     $host="localhost";
     $bd="cafeteria";
-    $usuario="mycafecola";
-    //$usuario="root";
-    $contraseña="UCjmuTN6";
-    //$contraseña="";
+    //$usuario="mycafecola";
+    $usuario="root";
+    //$contraseña="UCjmuTN6";
+    $contraseña="";
 
     try {
         
