@@ -1,11 +1,11 @@
 <?php
 
     $host="localhost";
-    $bd="cafe_colaborativodb";
-    //$usuario="mycafecola";
-    $usuario="root";
-    //$contraseña="UCjmuTN6";
-    $contraseña="";
+    $bd="cafeteria";
+    $usuario="mycafecola";
+    //$usuario="root";
+    $contraseña="UCjmuTN6";
+    //$contraseña="";
 
     try {
         

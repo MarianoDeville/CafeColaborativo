@@ -40,10 +40,10 @@
                                     WHERE carrito.usuario = :usuario;");
     $sentenciaSQL->bindParam(':usuario',$txtUsuario);
     $sentenciaSQL->execute( );
-    $listaCarrito=$sentenciaSQL->fetchAll(PDO::FETCH_ASSOC)
+    $listaCarrito=$sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
-<div class="<div class="d-none d-sm-block">
+<div class="d-none d-sm-block">
     
     <table class="table table-bordered">
 

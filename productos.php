@@ -30,10 +30,10 @@
 
     $sentenciaSQL=$conexion->prepare("SELECT * FROM productos;");
     $sentenciaSQL->execute( );
-    $listaProductos=$sentenciaSQL->fetchAll(PDO::FETCH_ASSOC)
+    $listaProductos=$sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
-<div class="<div class="d-none d-sm-block">
+<div class="d-none d-sm-block">
     
     <table class="table table-bordered">
 
