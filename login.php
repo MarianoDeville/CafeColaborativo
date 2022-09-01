@@ -16,10 +16,10 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 fw-bold">
             
             <br/>
-            <div class="card">
+            <div class="card">  
                 <div class="card-header">
                     Login
                 </div>
@@ -28,7 +28,7 @@
                     
                     <form method="POST">
 
-                        <div class = "form-group">
+                        <div class = "form-group fw-bold">
 
                         <p><label>Usuario:</label></p>
                             <p><input type="text" class="form-control" name="usuario" id="usuario" placeholder="Ingrese su nombre de usuario."></p>
@@ -36,7 +36,7 @@
                             <br></br>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group fw-bold">
 
                             <p><label>Contraseña:</label></p>
                             <input type="password" class="form-control" name="contraseña" placeholder="Escriba su contraseña">

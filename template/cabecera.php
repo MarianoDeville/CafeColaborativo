@@ -9,7 +9,7 @@
 
 	<meta charset="iso-8859-1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
 	<title>Trabajo Práctico - Cafe Colaborativo</title>
 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
@@ -19,35 +19,36 @@
 <body>
 	
 	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-		<ul class="nav navbar-nav">
+		<ul class="container-fluid list-unstyled">
 
 			<li class="nav-item">
-				<a class="nav-link" href="index.php">Home </a>
+				<a class="nav-link px-2 text-white" href="index.php"> Home </a>
 			</li>
 
 			<li class="nav-item">
-				<a class="nav-link" href="nosotros.php">Nosotros </a>
+				<a class="nav-link px-2 text-white" href="nosotros.php"> Nosotros </a>
 			</li>
 
 			<li class="nav-item">
-				<a class="nav-link" href="productos.php">Comprar</a>
+				<a class="nav-link px-2 text-white" href="productos.php"> Comprar</a>
 			</li>
 
 			<li class="nav-item">
-				<a class="nav-link" href="carrito.php">Carrito</a>
+				<a class="nav-link px-2 text-white" href="carrito.php">Carrito</a>
 			</li>
 
 			<?php
 				if($txtUsuario==""){ ?>
 
-					<li class="nav-item">
-					<a class="nav-link" href="login.php">LogIn</a>
-					</li>
+			<li class="nav-item">
+					<a class="nav-link px-2 text-white" href="login.php"> LogIn</a>
+			</li>
+
 			<?php } else { ?>
 
-				<li class="nav-item">
+			<li class="nav-item">
 				<a class="nav-link" href="logout.php">LogOut</a>
-				</li>
+			</li>
 			<?php } ?>
 		</ul>
 	</nav>
