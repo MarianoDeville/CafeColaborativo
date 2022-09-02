@@ -94,11 +94,11 @@
                         </div>
                         
                         <button type="submit" class="btn btn-primary" name="accion" value="crearCuenta">Crear cuenta</button>
-                        <br></br> 
-                        <br></br> 
                     </form>
                 </div>
             </div>
+            <br></br> 
+            <br></br> 
         </div>
     </div>
 </div>
