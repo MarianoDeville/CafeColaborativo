@@ -3,13 +3,17 @@
 
     $accion=(isset($_POST['accion']))?$_POST['accion']:"";
     $txtUsuario=(isset($_POST['usuario']))?$_POST['usuario']:"";
+    $txtcontraseña=(isset($_POST['contraseña']))?$_POST['contraseña']:"";
         
     if($accion=="entrar") {
 
-        if($txtUsuario!="") {
+        if($txtUsuario !="" && $txtcontraseña != "") {
 
             $_SESSION["nombre"] = $txtUsuario;
             header('Location:index.php');
+        } else {
+
+            echo "Falta nombre de usuario o contraseña.";
         }
     }
 
@@ -36,7 +40,7 @@
                         <div class = "form-group fw-bold">
 
                             <p><label>Usuario:</label></p>
-                            <p><input type="text" class="form-control" name="usuario" id="usuario" placeholder="Ingrese su nombre de usuario."></p>
+                            <p><input type="text" class="form-control" name="usuario" id="usuario" placeholder="Ingrese su email."></p>
                             <small id="emailHelp" class="form-text text-muted">Nunca comparta sus datos con nadie.</small>
                             <br></br>
                         </div>

@@ -10,40 +10,49 @@
     $email=(isset($_POST['email']))?$_POST['email']:"";
     $pass=(isset($_POST['pass']))?$_POST['pass']:"";
     $repass=(isset($_POST['repass']))?$_POST['repass']:"";
-        
+    $existe = false;
+
+    $sentenciaSQL=$conexion->prepare("SELECT * FROM usuarios;");
+    $sentenciaSQL->execute( );
+    $listaUsuarios=$sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
+    
     if($accion=="crearCuenta") {
 
         if($pass == $repass){
 
             if($nom != "" && $apell != "" && $dni != "" && $dir != "" && $email != "" && $pass != "") {
 
+                foreach($listaUsuarios as $usuario) { 
 
+                    if($usuario['email'] == $email) {
 
-echo $nom;
-echo $contraseña;
-echo $dir;
+                        $existe=true;
+                    }
+                }
 
+                if($existe == false) {
 
+                    $sentenciaSQL=$conexion->prepare("INSERT INTO usuarios (nombreUsuario, apellido, dni, email, direccion, contraseña) 
+                                                        VALUES (:nombre, :apellido, :dni, :email, :direccion, :pass)");
+                    $sentenciaSQL->bindParam(':nombre',$nom);
+                    $sentenciaSQL->bindParam(':apellido',$apell);
+                    $sentenciaSQL->bindParam(':dni',$dni);
+                    $sentenciaSQL->bindParam(':email',$email);
+                    $sentenciaSQL->bindParam(':direccion',$dir);
+                    $sentenciaSQL->bindParam(':pass',$pass);
+                    $sentenciaSQL->execute();
+                } else {
+
+                    echo "El nombre de usuario ya existe.";
+                }
             } else {
 
-
-echo "falta algun dato.";
+                echo "falta algun dato.";
             }
-
-
-
         } else {
 
-
-echo "las contraseñas son distintas";
-
+            echo "las contraseñas son distintas";
         }
-
-
-
-
-
-
     }
 ?>
 
@@ -53,7 +62,6 @@ echo "las contraseñas son distintas";
     <p class="lead">Por favor ingrese sus datos:</p>
     <hr class="my-2">
 </div>
-
 
 <div class="container">
     <div class="row">
@@ -71,7 +79,7 @@ echo "las contraseñas son distintas";
                             <p><label>Nombre:</label><input type="text" class="form-control" name="nom" id="nom" value="<?php echo  $nom; ?>"></p>
                             <p><label>Apellido:</label><input type="text" class="form-control" name="apell" id="apell" value="<?php echo  $apell; ?>"></p>
                             <p><label>DNI:</label><input type="number" class="form-control" name="dni" id="dni" value="<?php echo  $dni; ?>"></p>
-                            <p><label>email:</label><input type="text" class="form-control" name="email" id="email" value="<?php echo  $email; ?>"></p>
+                            <p><label>Email:</label><input type="text" class="form-control" name="email" id="email" value="<?php echo  $email; ?>"></p>
                             <p><label>Dirección:</label><input type="text" class="form-control" name="dir" id="dir" value="<?php echo  $dir; ?>"></p>
                         </div>
 
