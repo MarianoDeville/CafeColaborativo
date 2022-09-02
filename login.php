@@ -61,7 +61,7 @@
 
                             <p>
                                 <label>Usuario:</label>
-                                <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Ingrese su email.">
+                                <input type="text" class="form-control" name="usuario" id="usuario" value="<?php echo  $txtUsuario; ?>" placeholder="Ingrese su email.">
                                 <small id="emailHelp" class="form-text text-muted">Nunca comparta sus datos con nadie.</small>
                             </p>
                         </div>
@@ -75,7 +75,7 @@
                         </div>
                         <button type="submit" class="btn btn-primary" name="accion" value="entrar">Entrar</button>
                         <br></br> 
-                        <button type="submit" class="btn btn-primary" name="accion" value="crearCuenta">Registrarse</button>
+                        <button type="submit" class="btn btn-success" name="accion" value="crearCuenta">Registrarse</button>
                     </form>
                 </div>
             </div>

@@ -20,7 +20,6 @@
             $sentenciaSQL->bindParam(':cantidad',$txtCant);
             $sentenciaSQL->bindParam(':idpruducto',$txtID);
             $sentenciaSQL->execute();
-
             $sentenciaSQL=$conexion->prepare("UPDATE productos SET cantidad =cantidad-:cantidad WHERE idproductos=:id;");
             $sentenciaSQL->bindParam(':cantidad',$txtCant);
             $sentenciaSQL->bindParam(':id',$txtID);

@@ -11,16 +11,16 @@
     $pass=(isset($_POST['pass']))?$_POST['pass']:"";
     $repass=(isset($_POST['repass']))?$_POST['repass']:"";
     $existe = false;
-
-    $sentenciaSQL=$conexion->prepare("SELECT * FROM usuarios;");
-    $sentenciaSQL->execute( );
-    $listaUsuarios=$sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
     
     if($accion=="crearCuenta") {
 
         if($pass == $repass){
 
             if($nom != "" && $apell != "" && $dni != "" && $dir != "" && $email != "" && $pass != "") {
+
+                $sentenciaSQL=$conexion->prepare("SELECT * FROM usuarios;");
+                $sentenciaSQL->execute( );
+                $listaUsuarios=$sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 
                 foreach($listaUsuarios as $usuario) { 
 

@@ -28,7 +28,6 @@
         case "logout":
             session_unset();
             header('Location:index.php');
-            include("./template/pie.php");
             break;
 
         case "guardar":
@@ -46,10 +45,13 @@
             $sentenciaSQL->bindParam(':dir',$dir);
             $sentenciaSQL->bindParam(':id',$idusuario);
             $sentenciaSQL->execute();
+            echo "Se han actualizado los datos.";
             break;
 
         case "cambiarPass":
-            echo "Presionó el botón cambiarPass.";
+            $_SESSION['pass'] = $usuario['contraseña'];
+            echo "Presionó el botón cambiarPass.".$_SESSION["pass"];
+        //    header('Location:index.php');
             break;
 
         case "borrarUsuario":
@@ -105,10 +107,7 @@
                             </p>
                         </div>
                         
-                        
-                        
                         <p>
-
                             <button type="submit" class="btn btn-primary" name="accion" value="guardar">Guardar cambio</button>
                             <button type="submit" class="btn btn-primary" name="accion" value="cambiarPass">Cambiar contraseña</button>
                         </p>
