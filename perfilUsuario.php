@@ -21,6 +21,7 @@
     $dni=(isset($usuario['dni']))?$usuario['dni']:"";
     $dir=(isset($usuario['direccion']))?$usuario['direccion']:"";
     $email=(isset($usuario['email']))?$usuario['email']:"";
+    $idusuario=(isset($usuario['idusuarios']))?$usuario['idusuarios']:"";
 
     switch($accion){
 
@@ -31,7 +32,20 @@
             break;
 
         case "guardar":
-            echo "Presionó el botón guardar.";
+            $nom=$_POST['nom'];
+            $apell=$_POST['apell'];
+            $dni=$_POST['dni'];
+            $email=$_POST['email'];
+            $dir=$_POST['dir'];
+            $sentenciaSQL=$conexion->prepare("UPDATE usuarios SET nombreUsuario=:nom, apellido=:apell, dni=:dni, email=:email, direccion=:dir 
+                                            WHERE idusuarios=:id");
+            $sentenciaSQL->bindParam(':nom',$nom);
+            $sentenciaSQL->bindParam(':apell',$apell);
+            $sentenciaSQL->bindParam(':dni',$dni);
+            $sentenciaSQL->bindParam(':email',$email);
+            $sentenciaSQL->bindParam(':dir',$dir);
+            $sentenciaSQL->bindParam(':id',$idusuario);
+            $sentenciaSQL->execute();
             break;
 
         case "cambiarPass":
@@ -91,7 +105,10 @@
                             </p>
                         </div>
                         
+                        
+                        
                         <p>
+
                             <button type="submit" class="btn btn-primary" name="accion" value="guardar">Guardar cambio</button>
                             <button type="submit" class="btn btn-primary" name="accion" value="cambiarPass">Cambiar contraseña</button>
                         </p>
