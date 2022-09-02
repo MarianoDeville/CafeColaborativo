@@ -1,7 +1,7 @@
 	<footer class="container-fluid bg-dark fixed-bottom">	
 		<div class="row">
 			<div class="col-md text-light text-center py-3"> 
-				Desarrollado por Mariano, Maxi, Johana y Pablo 
+				Desarrollado por: Mariano Deville, Maximiliano Ortega, Johana Manzanares y Pablo Calvano.
 			</div>
 		</div>
 	</footer>
