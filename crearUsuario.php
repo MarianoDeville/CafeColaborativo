@@ -41,13 +41,15 @@
                     $sentenciaSQL->bindParam(':direccion',$dir);
                     $sentenciaSQL->bindParam(':pass',$pass);
                     $sentenciaSQL->execute();
+                    $_SESSION["nombre"] = $email;
+                    header('Location:index.php');
                 } else {
 
                     echo "El nombre de usuario ya existe.";
                 }
             } else {
 
-                echo "falta algun dato.";
+                echo "Los campos están incompletos.";
             }
         } else {
 
@@ -64,7 +66,9 @@
 </div>
 
 <div class="container">
+    
     <div class="row">
+
         <div class="col-md-4 fw-bold">
             
             <br/>

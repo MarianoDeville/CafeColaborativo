@@ -40,15 +40,14 @@
 			<?php
 				if($txtUsuario==""){ ?>
 
-			<li class="nav-item">
+				<li class="nav-item">
 					<a class="nav-link px-2 text-white" href="login.php"> LogIn</a>
-			</li>
-
+				</li>
 			<?php } else { ?>
 
-			<li class="nav-item">
-				<a class="nav-link" href="logout.php">LogOut</a>
-			</li>
+				<li class="nav-item">
+					<a class="nav-link px-2 text-white" href="perfilUsuario.php"> <?php echo $txtUsuario; ?></a>
+				</li>
 			<?php } ?>
 		</ul>
 	</nav>
