@@ -49,13 +49,14 @@
             break;
 
         case "cambiarPass":
-            $_SESSION['pass'] = $usuario['contraseña'];
+            $_SESSION['pass'] = $usuario['pass'];
             echo "Presionó el botón cambiarPass.".$_SESSION["pass"];
-        //    header('Location:index.php');
+        //    header('Location:cambiarContraseña.php');
             break;
 
         case "borrarUsuario":
             echo "Presionó el botón borrarUsuario.";
+        //    header('Location:cambiarContraseña.php');
             break;
     }
   ?>

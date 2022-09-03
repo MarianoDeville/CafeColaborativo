@@ -4,7 +4,7 @@
 
     $accion=(isset($_POST['accion']))?$_POST['accion']:"";
     $txtUsuario=(isset($_POST['usuario']))?$_POST['usuario']:"";
-    $txtcontraseña=(isset($_POST['contraseña']))?$_POST['contraseña']:"";
+    $txtcontraseña=(isset($_POST['pass']))?$_POST['pass']:"";
     $coincidencia=false;
 
     if($accion=="entrar") {
@@ -17,7 +17,7 @@
 
             foreach($listaUsuarios as $usuario) { 
 
-                if($usuario['email'] == $txtUsuario && $usuario['contraseña'] == $txtcontraseña) {
+                if($usuario['email'] == $txtUsuario && $usuario['pass'] == $txtcontraseña) {
 
                     $coincidencia=true;
                     break;
@@ -70,7 +70,7 @@
 
                             <p>
                                 <label>Contraseña:</label>
-                                <input type="password" class="form-control" name="contraseña" placeholder="Escriba su contraseña">
+                                <input type="password" class="form-control" name="pass" placeholder="Escriba su contraseña">
                             </p>
                         </div>
                         <button type="submit" class="btn btn-primary" name="accion" value="entrar">Entrar</button>

@@ -21,26 +21,28 @@
                 $sentenciaSQL=$conexion->prepare("SELECT * FROM usuarios;");
                 $sentenciaSQL->execute( );
                 $listaUsuarios=$sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
+         
+                if(isset($listaUsuarios)){
 
-                foreach($listaUsuarios as $usuario) { 
+                    foreach($listaUsuarios as $usuario) { 
 
-                    if($usuario['email'] == $email) {
-
-                        $existe=true;
+                        if($usuario['email'] == $email) {
+    
+                            $existe=true;
+                        }
                     }
                 }
 
                 if($existe == false) {
 
-                    $sentenciaSQL=$conexion->prepare("INSERT INTO usuarios (nombreUsuario, apellido, dni, email, direccion, contraseña) 
-                                                        VALUES (:nombre, :apellido, :dni, :email, :direccion, :pass)");
-                    $sentenciaSQL->bindParam(':nombre',$nom);
-                    $sentenciaSQL->bindParam(':apellido',$apell);
-                    $sentenciaSQL->bindParam(':dni',$dni);
-                    $sentenciaSQL->bindParam(':email',$email);
-                    $sentenciaSQL->bindParam(':direccion',$dir);
-                    $sentenciaSQL->bindParam(':pass',$pass);
-                    $sentenciaSQL->execute();
+                    $sentenciaSQL=$conexion->prepare("INSERT INTO usuarios (nombreUsuario, apellido, dni, email, direccion, pass) VALUES (:nombre, :apellido, :dni, :email, :direccion, :pass)");
+                    $sentenciaSQL->bindParam(':nombre', $nom);
+                    $sentenciaSQL->bindParam(':apellido', $apell);
+                    $sentenciaSQL->bindParam(':dni', $dni);
+                    $sentenciaSQL->bindParam(':email', $email);
+                    $sentenciaSQL->bindParam(':direccion', $dir);
+                    $sentenciaSQL->bindParam(':pass', $pass);
+                    $sentenciaSQL->execute( );
                     $_SESSION["nombre"] = $email;
                     header('Location:index.php');
                 } else {
@@ -71,7 +73,6 @@
 
         <div class="col-md-4 fw-bold">
             
-            <br/>
             <div class="card">  
 
                 <div class="card-body">
