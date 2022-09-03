@@ -50,13 +50,11 @@
 
         case "cambiarPass":
             $_SESSION['pass'] = $usuario['pass'];
-            echo "Presionó el botón cambiarPass.".$_SESSION["pass"];
-        //    header('Location:cambiarContraseña.php');
+            header('Location:cambiarContraseña.php');
             break;
 
         case "borrarUsuario":
-            echo "Presionó el botón borrarUsuario.";
-        //    header('Location:cambiarContraseña.php');
+            header('Location:borrarUsuario.php');
             break;
     }
   ?>
@@ -117,7 +115,7 @@
                             <button type="submit" class="btn btn-danger" name="accion" value="borrarUsuario">Borrar usuario</button>
                         </p>
                         <p>
-                            <button type="submit" class="btn btn-primary" name="accion" value="logout">Salir</button>
+                            <button type="submit" class="btn btn-success" name="accion" value="logout">Salir</button>
                         </p>
                     </form>
                 </div>
