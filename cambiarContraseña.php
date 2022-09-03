@@ -39,7 +39,7 @@
 
 <div class="jumbotron">
 
-    <h1 class="display-3">Cambiar contraseña</h1>
+    <h1 style="color: white;" class="display-3">Cambiar contraseña</h1>
     <hr class="my-2">
 </div>
 

@@ -38,12 +38,12 @@
 
         <thead>
             <tr>
-            <th>Img</th>
-            <th>Producto</th>
-            <th>Precio</th>
-            <th>Stock</th>
-            <th>Cantidad</th>
-            <th>Acciones</th>
+            <th style="color: white;">Img</th>
+            <th style="color: white;">Producto</th>
+            <th style="color: white;">Precio</th>
+            <th style="color: white;">Stock</th>
+            <th style="color: white;">Cantidad</th>
+            <th style="color: white;">Acciones</th>
             </tr>
         </thead>
 
@@ -54,10 +54,10 @@
                 <tr>
                     <form method="post">
                         <td><img src="./img/photo-coffee.png" ></td>
-                        <td><?php echo $productos['nombre']; ?></td>
-                        <td><?php echo $productos['precio']; ?></td>
-                        <td><?php echo $productos['cantidad']; ?></td>
-                        <td><input type="number" class="form-control" name="txtCant" id="txtCant" value="1" placeholder="Cant."></td>
+                        <td style="color: white;"><?php echo $productos['nombre']; ?></td>
+                        <td style="color: white;"><?php echo $productos['precio']; ?></td>
+                        <td style="color: white;"><?php echo $productos['cantidad']; ?></td>
+                        <td style="color: white;"><input type="number" class="form-control" name="txtCant" id="txtCant" value="1" placeholder="Cant."></td>
                         <td>
 
                             <input type="hidden" name="txtID" id="txtID" value="<?php echo $productos['idproductos']; ?>"/>
@@ -69,5 +69,7 @@
             <?php }?>
         </tbody>
     </table>
+    <br>
+    <br>
 </div>  
 <?php include("./template/footer.php"); ?>

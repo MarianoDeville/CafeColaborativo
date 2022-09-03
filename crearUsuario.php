@@ -62,7 +62,7 @@
 
 <div class="jumbotron">
     
-    <h1 class="display-3">Registro</h1>
+    <h1 style="color: white;" class="display-3">Registro</h1>
     <p class="lead">Por favor ingrese sus datos:</p>
     <hr class="my-2">
 </div>

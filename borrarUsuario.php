@@ -21,7 +21,7 @@
 
 <div class="jumbotron">
 
-    <h1 class="display-3">Eliminar cuenta.</h1>
+    <h1 style="color: white;" class="display-3">Eliminar cuenta.</h1>
     <p class="lead">Se eliminaran todos los datos de la cuenta.</p>
     <hr class="my-2">
 </div>
