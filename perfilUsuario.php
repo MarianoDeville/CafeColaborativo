@@ -45,7 +45,9 @@
             $sentenciaSQL->bindParam(':dir',$dir);
             $sentenciaSQL->bindParam(':id',$idusuario);
             $sentenciaSQL->execute();
-            echo "Se han actualizado los datos.";
+            ?>
+                <p style="color: white;"><?php echo  "Se han actualizado los datos."; ?></p> 
+            <?php
             break;
 
         case "cambiarPass":

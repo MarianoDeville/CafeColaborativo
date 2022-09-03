@@ -47,15 +47,21 @@
                     header('Location:index.php');
                 } else {
 
-                    echo "El nombre de usuario ya existe.";
+                    ?>
+                        <p style="color: white;"><?php echo "El nombre de usuario ya existe.";?></p> 
+                    <?php
                 }
             } else {
 
-                echo "Los campos están incompletos.";
+                ?>
+                    <p style="color: white;"><?php echo "Los campos están incompletos.";?></p> 
+                <?php
             }
         } else {
 
-            echo "las contraseñas son distintas";
+            ?>
+                <p style="color: white;"><?php echo "Las contraseñas son distintas";?></p> 
+            <?php
         }
     }
 ?>

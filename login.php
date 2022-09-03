@@ -29,12 +29,16 @@
                 $_SESSION["nombre"] = $txtUsuario;
                 header('Location:index.php');
             } else {
-
-                echo "Usuario o contraseña incorrectos.";
+            
+                ?>
+                    <p style="color: white;"><?php echo "Usuario o contraseña incorrectos.";?></p> 
+                <?php
             }
         } else {
 
-            echo "Falta nombre de usuario o contraseña.";
+            ?>
+                <p style="color: white;"><?php echo "Falta nombre de usuario o contraseña.";?></p> 
+            <?php
         }
     }
 

@@ -36,7 +36,6 @@
             $sentenciaSQL=$conexion->prepare("DELETE FROM carrito WHERE idcarrito=:idCarrito");
             $sentenciaSQL->bindParam(':idCarrito',$txtIdCarrito);
             $sentenciaSQL->execute();
-            echo $txtCant." ".$txtIdCarrito;
             break;
     }
 

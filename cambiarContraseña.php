@@ -20,15 +20,21 @@
                 $sentenciaSQL->bindParam(':nom',$usuario);
                 $sentenciaSQL->execute();
                 $_SESSION['pass']=$newPass;
-                echo "Se ha actualizado la contraseña.";
+                ?>
+                    <p style="color: white;"><?php echo "Se ha actualizado la contraseña.";?></p> 
+                <?php
             } else {
 
-                echo "Error en la nueva contraseña.";
+                ?>
+                    <p style="color: white;"><?php echo "Error en la nueva contraseña.";?></p> 
+                <?php
             }
 
         } else {
 
-            echo "Contraseña incorrecta.";
+            ?>
+                <p style="color: white;"><?php echo "Contraseña incorrecta.";?></p> 
+            <?php
         }
     }
     if($accion=="descartar") {
