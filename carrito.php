@@ -29,9 +29,14 @@
             break;
         
         case "Eliminar":
+            $sentenciaSQL=$conexion->prepare("UPDATE productos JOIN cafeteria.carrito ON carrito.idProducto = productos.idproductos SET cantidad = cantidad + :cantidad WHERE idcarrito = :idCarrito");
+            $sentenciaSQL->bindParam(':cantidad',$txtCant);
+            $sentenciaSQL->bindParam(':idCarrito',$txtIdCarrito);
+            $sentenciaSQL->execute( );
             $sentenciaSQL=$conexion->prepare("DELETE FROM carrito WHERE idcarrito=:idCarrito");
             $sentenciaSQL->bindParam(':idCarrito',$txtIdCarrito);
             $sentenciaSQL->execute();
+            echo $txtCant." ".$txtIdCarrito;
             break;
     }
 
@@ -72,6 +77,7 @@
                         <td>
                             <?php $total+=$productos['cant']*$productos['precio']; ?>
                             <input type="hidden" name="txtIdCarrito" id="txtIdCarrito" value="<?php echo $productos['idcarrito']; ?>"/>
+                            <input type="hidden" name="txtCant" id="txtCant" value="<?php echo $productos['cant']; ?>"/>
                             <input type="submit" name="accion" value="Eliminar" class="btn btn-danger btn-sm"/>
                         </td>
                     </form>
