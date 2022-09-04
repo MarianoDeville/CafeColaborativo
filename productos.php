@@ -32,13 +32,13 @@
     $listaProductos=$sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
-<div class="<div class="d-none d-sm-block">
+<div class="table-responsive-lg">
 
-    <table class="table table-bordered">
+    <table class="table table-bordered table-dark table-striped table-hover">
 
         <thead>
             <tr>
-            <th style="color: white;">Img</th>
+            <th style="color: white;">Imagen</th>
             <th style="color: white;">Producto</th>
             <th style="color: white;">Precio</th>
             <th style="color: white;">Stock</th>

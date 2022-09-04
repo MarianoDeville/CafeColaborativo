@@ -47,13 +47,13 @@
     $listaCarrito=$sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
-<div class="<div class="d-none d-sm-block">
+<div class="table-responsive-lg">
     
-    <table class="table table-bordered">
+    <table class="table table-bordered table-dark table-striped">
 
         <thead>
             <tr>
-            <th style="color: white;">Img</th>
+            <th style="color: white;">Imagen</th>
             <th style="color: white;">Producto</th>
             <th style="color: white;">Precio</th>
             <th style="color: white;">Cantidad</th>
@@ -84,21 +84,20 @@
             <?php }?>
         </tbody>
     </table>
-
-    <tr>
-        <form method="post">
-            <td>
+    </div>
+        <form method="post" class="row gy-2 gx-3">
+        <div class="col">
                 <h2 style="color: white;"><?php echo "Total a pagar: $ ".$total; ?></h2>
-                <p align="right">   
                     
-                    <input type="hidden" name="txtTotalCompra" id="txtTotalCompra" value="<?php echo $total; ?>"/>
-                    <input type="submit" name="accion" value="Vaciar" class="btn btn-danger btn-sm"/>
-                    <input type="submit" name="accion" value="Comprar" class="btn btn-success btn-sm"/>
-                </p>
-            </td>
+                <input type="hidden" name="txtTotalCompra" id="txtTotalCompra" value="<?php echo $total; ?>"/>
+            </div>
+            <div class="col-auto">
+                <input type="submit" name="accion" value="Vaciar" class="btn btn-danger btn-sm"/>
+            
+                <input type="submit" name="accion" value="Comprar" class="btn btn-success btn-sm"/>
+                </div>
         </form>
-    </tr>
     <br>
     <br>
-</div>
+
 <?php include("./template/footer.php"); ?>
