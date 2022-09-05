@@ -21,7 +21,7 @@
 	
 
 
-	<nav class="navbar navbar-expand-lg bg-dark">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand text-white" href="#"><i class="fas fa-coffee"></i> CafeColaborativo</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,11 +33,11 @@
           <a class="nav-link active text-white" aria-current="page" href="index.php">Home</a>
         </li>
 		<li class="nav-item">
-				<a class="nav-link px-3 text-white" href="nosotros.php"> Nosotros </a>
+				<a class="nav-link px-3 text-white" href="nosotros.php">Nosotros </a>
 			</li>
 
 			<li class="nav-item">
-				<a class="nav-link px-3 text-white" href="productos.php"> Comprar</a>
+				<a class="nav-link px-3 text-white" href="productos.php">Comprar</a>
 			</li>
 
 			<li class="nav-item">
@@ -47,7 +47,7 @@
 				if($txtUsuario==""){ ?>
 
 				<li class="nav-item">
-					<a class="nav-link px-3 text-white" href="login.php"> LogIn</a>
+					<a class="nav-link px-3 text-white" href="login.php">LogIn</a>
 				</li>
 			<?php } else { ?>
 
